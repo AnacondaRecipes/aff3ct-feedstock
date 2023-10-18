@@ -1,12 +1,23 @@
+{% set name = "aff3ct" %}
+{% set version = "3.0.2" %}
+
 package:
-  name: aff3ct
-  version: 3.0.2
+  name: {{ name }}
+  version: {{ version }}
+
+
+
+
+#package:
+#  name: aff3ct
+#  version: 3.0.2
 
 source:
   url: https://github.com/aff3ct/aff3ct.git
   ref: v3.0.2
 
 build:
+  number: 0
   script: echo asd
 
 requirements:
