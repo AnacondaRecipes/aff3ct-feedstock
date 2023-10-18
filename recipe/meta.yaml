@@ -1,0 +1,28 @@
+package:
+  name: aff3ct
+  version: 3.0.2
+
+source:
+  url: https://github.com/aff3ct/aff3ct.git
+  ref: v3.0.2
+
+build:
+  script: echo asd
+
+requirements:
+  build:
+    - cmake
+  run:
+    - cmake
+
+about:
+  home: https://github.com/aff3ct/aff3ct.git
+  license: MIT
+  summary: C++ library dedicated to the Forward Error Correction
+
+extra:
+  anaconda-services:
+    ref: https://anaconda.zendesk.com/agent/tickets/41195
+    reason: Northrop Grumman ask
+  recipe-maintainers:
+    - ianaobi
