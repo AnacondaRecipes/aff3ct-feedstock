@@ -6,25 +6,24 @@ package:
   version: {{ version }}
 
 
-
-
-#package:
-#  name: aff3ct
-#  version: 3.0.2
-
 source:
   url: https://github.com/aff3ct/aff3ct.git
   ref: v3.0.2
 
 build:
   number: 0
-  script: echo asd
+#  script: echo asd
 
 requirements:
   build:
     - cmake
   run:
     - cmake
+
+#test:
+#  commands:
+#    - $PREFIX/bin/aff3ct --version   # [unix]
+#    - aff3ct --version
 
 about:
   home: https://github.com/aff3ct/aff3ct.git
