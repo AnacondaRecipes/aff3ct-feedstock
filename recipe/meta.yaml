@@ -22,7 +22,7 @@ requirements:
 
 test:
   commands:
-    - $PREFIX/bin/aff3ct    # [unix]
+#    - $PREFIX/bin/aff3ct --version    # [unix]
     - aff3ct --version
 
 about:
