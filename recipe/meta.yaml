@@ -22,8 +22,8 @@ requirements:
 
 test:
   commands:
-    - $PREFIX/bin/aff3ct --version   # [unix]
-#    - aff3ct --version
+    - $PREFIX/bin/aff3ct    # [unix]
+    - aff3ct --version
 
 about:
   home: https://github.com/aff3ct/aff3ct.git
