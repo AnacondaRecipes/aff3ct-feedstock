@@ -12,7 +12,6 @@ source:
 
 build:
   number: 0
-  cmake
 #  script: echo asd
 
 requirements:
@@ -21,9 +20,9 @@ requirements:
   run:
     - cmake
 
-#test:
-#  commands:
-#    - $PREFIX/bin/aff3ct --version   # [unix]
+test:
+  commands:
+    - $PREFIX/bin/aff3ct --version   # [unix]
 #    - aff3ct --version
 
 about:
