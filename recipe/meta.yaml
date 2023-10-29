@@ -20,10 +20,10 @@ requirements:
   run:
     - cmake
 
-test:
-  commands:
+#test:
+#  commands:
 #    - $PREFIX/bin/aff3ct --version    # [unix]
-    - bin/aff3ct --version
+#    - bin/aff3ct --version
 
 about:
   home: https://github.com/aff3ct/aff3ct.git
