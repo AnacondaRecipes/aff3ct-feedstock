@@ -1,5 +1,7 @@
 {% set name = "aff3ct" %}
 {% set version = "3.0.2" %}
+{% set sha256 = "29ffb734728d4c5e96e15f289e42c301000e1b24dab7b2aac4dcc1008aaac6d3" %}  # [not win]
+{% set sha256 = "aa0eaba242ade2da56c89493c26e426d53df29a0a18edb83aedaad1a9d5eeab5" %}  # [win]
 
 package:
   name: {{ name }}
@@ -7,12 +9,13 @@ package:
 
 
 source:
-  url: https://github.com/aff3ct/aff3ct.git
-  ref: v3.0.2
+  url: https://github.com/aff3ct/aff3ct/archive/refs/tags/v{{ version }}.tar.gz # [not win]
+  url: https://github.com/aff3ct/aff3ct/archive/refs/tags/v{{ version }}.zip    # [win]
+  sha256: {{ sha256 }}
 
 build:
   number: 0
-#  script: echo asd
+  noarch: generic
 
 requirements:
   build:
@@ -26,14 +29,20 @@ requirements:
 #    - bin/aff3ct --version
 
 about:
-  home: https://github.com/aff3ct/aff3ct.git
+  home: https://aff3ct.github.io/
   license: MIT
+  license_family: MIT
+  license_file: LICENSE
   summary: C++ library dedicated to the Forward Error Correction
+  description: AFF3CT is a simulator and a library dedicated to the Forward Error Correction (FEC or channel coding).
+  dev_url: https://github.com/aff3ct/aff3ct.git
+  doc_url: https://aff3ct.readthedocs.io/en/latest/
 
 extra:
+
   anaconda-services:
     ref: https://anaconda.zendesk.com/agent/tickets/41195
-    reason: Northrop Grumman ask
-  recipe-maintainers:
-    - ianaobi
-    - bradley
+    reason: Built for customer - see ticket
+    recipe-maintainers:
+      - ianaobi
+      - bradley
