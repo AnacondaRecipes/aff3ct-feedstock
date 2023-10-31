@@ -20,8 +20,8 @@ build:
 requirements:
   build:
     - cmake
-  run:
-    - cmake
+  #run:
+  #  - cmake
 
 #test:
 #  commands:
@@ -36,7 +36,7 @@ about:
   summary: C++ library dedicated to the Forward Error Correction
   description: AFF3CT is a simulator and a library dedicated to the Forward Error Correction (FEC or channel coding).
   dev_url: https://github.com/aff3ct/aff3ct.git
-  doc_url: https://aff3ct.readthedocs.io/en/latest/
+  doc_url: https://aff3ct.readthedocs.io
 
 extra:
 
