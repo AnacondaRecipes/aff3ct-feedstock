@@ -18,6 +18,8 @@ build:
   noarch: generic
 
 requirements:
+  host:
+    - git
   build:
     - cmake
   #run:
