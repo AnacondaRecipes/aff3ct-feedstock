@@ -17,8 +17,8 @@
 
 
 
-mkdir -p aff3ct/build
-cd aff3ct/build
+mkdir -p build
+cd build
 cmake .. -DCMAKE_BUILD_TYPE="Release" -DCMAKE_INSTALL_PREFIX=$PREFIX -DAFF3CT_OVERIDE_VERSION=$VERSION
 make -j4
 make install
