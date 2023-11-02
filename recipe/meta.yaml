@@ -23,6 +23,8 @@ requirements:
     - git
     - git-lfs
   build:
+    - git
+    - git-lfs
     - cmake
   #run:
   #  - cmake
