@@ -19,7 +19,7 @@
 git config --global protocol.file.allow always
 
 git clone --recursive https://github.com/aff3ct/aff3ct.git
-cd affe3ct
+cd aff3ct
 git checkout tags/v$VERSION
 mkdir -p build
 cd build
