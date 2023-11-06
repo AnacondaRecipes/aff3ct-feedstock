@@ -22,6 +22,11 @@ requirements:
   host:
     - git
     - git-lfs
+    - cmake
+    - make
+    - {{ compiler('c') }}        # [not win]
+    - {{ compiler('cxx') }}      # [not win]
+
   build:
     - git
     - git-lfs
