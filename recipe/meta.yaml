@@ -8,12 +8,12 @@ package:
   version: {{ version }}
 
 
-source:
+#source:
   #url: https://github.com/aff3ct/aff3ct/archive/refs/tags/v{{ version }}.tar.gz # [not win]
   #url: https://github.com/aff3ct/aff3ct/archive/refs/tags/v{{ version }}.zip    # [win]
   #sha256: {{ sha256 }}
-  git_url: https://github.com/aff3ct/aff3ct.git
-  ref: v{{ version }}
+  #git_url: https://github.com/aff3ct/aff3ct.git
+  #ref: v{{ version }}
 
 build:
   number: 1
@@ -51,4 +51,4 @@ extra:
     reason: Built for customer - see ticket
     recipe-maintainers:
       - ianaobi
-      - bradley
+      - bkreider
