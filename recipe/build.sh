@@ -23,7 +23,7 @@ cd aff3ct
 git checkout tags/v$PKG_VERSION
 mkdir -p build
 cd build
-cmake .. -DCMAKE_BUILD_TYPE="Release" -DCMAKE_INSTALL_PREFIX=$PREFIX -DAFF3CT_OVERIDE_VERSION=$PKG_VERSION
+cmake .. -DCMAKE_BUILD_TYPE="Release" -DCMAKE_INSTALL_PREFIX=$PREFIX -DAFF3CT_OVERRIDE_VERSION=$PKG_VERSION
 make -j4
 make install
 

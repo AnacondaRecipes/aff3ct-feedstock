@@ -19,7 +19,7 @@ build:
   number: 1
 
 requirements:
-  host:
+  build:
     - git
     - git-lfs
     - cmake
@@ -27,7 +27,7 @@ requirements:
     - {{ compiler('c') }}        # [not win]
     - {{ compiler('cxx') }}      # [not win]
 
-  build:
+  host:
     - git
     - git-lfs
     - cmake
