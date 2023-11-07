@@ -17,27 +17,35 @@ package:
 
 build:
   number: 1
+  skip: True # [aarch64 or s390x or ppc64le or arm64]
 
 requirements:
   build:
     - git
     - git-lfs
-    - cmake
-    - make
+    - cmake                      # [not win]
+    - make                       # [not win]
     - {{ compiler('c') }}        # [not win]
     - {{ compiler('cxx') }}      # [not win]
+    - {{native}}toolchain        # [win]
+    - {{posix}}filesystem        # [win]
+    - {{posix}}make              # [win]
+    - {{posix}}sed               # [win]
+    - {{posix}}coreutils         # [win]
+    - {{posix}}zip               # [win]
 
   host:
     - git
     - git-lfs
-    - cmake
+  # - cmake
   #run:
   #  - cmake
 
-#test:
-#  commands:
-#    - $PREFIX/bin/aff3ct --version    # [unix]
-#    - bin/aff3ct --version
+test:
+  commands:
+    - $PREFIX/bin/aff3ct --version    # [unix]
+    - bin/aff3ct --version            # [unix]
+    - %PREFIX%\Library\bin\aff3ct --version # [win]
 
 about:
   home: https://aff3ct.github.io/
