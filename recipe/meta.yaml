@@ -21,7 +21,8 @@ build:
 
 requirements:
   build:
-    - git
+    - git                        # [not win]
+    - m2-git                     # [win]
     - git-lfs
     - cmake                      # [not win]
     - make                       # [not win]
@@ -30,9 +31,8 @@ requirements:
     - {{native}}toolchain        # [win]
     - {{posix}}filesystem        # [win]
     - {{posix}}make              # [win]
-    - {{posix}}sed               # [win]
-    - {{posix}}coreutils         # [win]
-    - {{posix}}zip               # [win]
+    #- {{posix}}sed               # [win]
+    #- {{posix}}coreutils         # [win]
 
   host:
     - git
