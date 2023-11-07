@@ -43,7 +43,7 @@ about:
   home: https://aff3ct.github.io/
   license: MIT
   license_family: MIT
-  license_file: LICENSE
+  #license_file: LICENSE
   summary: C++ library dedicated to the Forward Error Correction
   description: AFF3CT is a simulator and a library dedicated to the Forward Error Correction (FEC or channel coding).
   dev_url: https://github.com/aff3ct/aff3ct.git
