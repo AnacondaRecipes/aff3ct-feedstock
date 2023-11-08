@@ -28,24 +28,17 @@ requirements:
     - make                       # [not win]
     - {{ compiler('c') }}        # [not win1]
     - {{ compiler('cxx') }}      # [not win1]
-    - {{native}}toolchain        # [win]
+    - m2w64-toolchain        # [win]
     - {{posix}}filesystem        # [win]
     - {{posix}}make              # [win]
     #- {{posix}}sed               # [win]
     #- {{posix}}coreutils         # [win]
 
-  host:
-    - git
-    - git-lfs
-  # - cmake
-  #run:
-  #  - cmake
-
 test:
   commands:
     - $PREFIX/bin/aff3ct --version    # [unix]
     - bin/aff3ct --version            # [unix]
-    - %PREFIX%\Library\bin\aff3ct --version # [win]
+    - '%PREFIX%\Library\bin\aff3ct --version' # [win]
 
 about:
   home: https://aff3ct.github.io/
