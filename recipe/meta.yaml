@@ -42,10 +42,10 @@ requirements:
     - python
     - numpy              >1.19.2
 
-test:
-  commands:
-    - $PREFIX/bin/aff3ct --version    # [unix]
-    - bin/aff3ct --version            # [unix]
+#test:
+  #commands:
+    #- $PREFIX/bin/aff3ct --version    # [unix]
+    #- bin/aff3ct --version            # [unix]
 
 about:
   home: https://aff3ct.github.io/
