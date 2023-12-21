@@ -36,7 +36,6 @@ test:
   commands:
     - $PREFIX/bin/aff3ct --version    # [unix]
     - bin/aff3ct --version            # [unix]
-    #- '%PREFIX%\Library\bin\aff3ct --version' # [win]
 
 about:
   home: https://aff3ct.github.io/
