@@ -1,0 +1,67 @@
+{% set name = "aff3ct" %}
+{% set version = "3.0.2" %}
+{% set sha256 = "29ffb734728d4c5e96e15f289e42c301000e1b24dab7b2aac4dcc1008aaac6d3" %}  # [not win]
+{% set sha256 = "aa0eaba242ade2da56c89493c26e426d53df29a0a18edb83aedaad1a9d5eeab5" %}  # [win]
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+
+#source:
+  #url: https://github.com/aff3ct/aff3ct/archive/refs/tags/v{{ version }}.tar.gz # [not win]
+  #url: https://github.com/aff3ct/aff3ct/archive/refs/tags/v{{ version }}.zip    # [win]
+  #sha256: {{ sha256 }}
+  #git_url: https://github.com/aff3ct/aff3ct.git
+  #ref: v{{ version }}
+
+build:
+  number: 1
+  skip: True # [aarch64 or s390x or ppc64le or arm64]
+
+requirements:
+  build:
+    - git                        # [not win]
+    - m2-git                     # [win]
+    - git-lfs
+    - cmake                      # [not win]
+    - make                       # [not win]
+    - {{ compiler('c') }}        # [not win]
+    - {{ compiler('cxx') }}      # [not win]
+    - {{ compiler('m2w64-toolchain') }} # [win]
+    #- m2w64-toolchain        # [win]
+    - m2-make              # [win]
+  host:
+    - doxygen
+    - python
+    - xmltodict          =0.12.0
+    - matplotlib         =3.5.0
+    - numpy              >1.19.2
+    - sphinx_rtd_theme   
+  run:
+    - python
+    - numpy              >1.19.2
+
+#test:
+  #commands:
+    #- $PREFIX/bin/aff3ct --version    # [unix]
+    #- bin/aff3ct --version            # [unix]
+
+about:
+  home: https://aff3ct.github.io/
+  license: MIT
+  license_family: MIT
+  #license_file: LICENSE
+  summary: C++ library dedicated to the Forward Error Correction
+  description: AFF3CT is a simulator and a library dedicated to the Forward Error Correction (FEC or channel coding).
+  dev_url: https://github.com/aff3ct/aff3ct.git
+  doc_url: https://aff3ct.readthedocs.io
+
+extra:
+
+  anaconda-services:
+    ref: https://anaconda.zendesk.com/agent/tickets/41195
+    reason: Built for customer - see ticket
+    recipe-maintainers:
+      - ianaobi
+      - bkreider
